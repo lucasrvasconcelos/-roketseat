@@ -1,0 +1,217 @@
+:root
+{
+    --font-poppins: 'Poppins', sans-serif;
+    --bg-outline: #8257E5; 
+    --bg-outline-hover: white;
+    --bg-outline-opacity: #8257e572; 
+
+    --background-color: #121214;
+    --font-color: white;
+    --button: #FFFFFF80;
+    --buttom-socials: #FFFFFF1A; 
+    --buttom-socials-hover :#FFFFFF0D;
+    --persist-color: white;
+    --icons-socials: #ffffff2e;
+    --theme: white;
+
+    --my-image: url("../img/rocketseat-logo.jpg");
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-poppins);
+}
+
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--background-color);
+    padding: 24px;
+
+}
+
+body .container
+{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+body .container .profile
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+body .container .profile .my-image
+{
+    width: 112px;
+    height: 112px;
+    border-radius: 48% 52% 42% 58%/54% 46% 54% 46%; 
+    outline: 4px solid var(--bg-outline)  ;
+    background: var(--my-image) no-repeat center /cover;
+}
+
+body .container .profile a
+{
+    color: var(--persist-color);
+    text-decoration: none;
+    text-transform: lowercase;
+    
+}
+
+body .container .theme .track
+{
+    background-color: var(--icons-socials);
+    height: 20px;
+    width: 58px;
+    position: relative;
+    border-radius: 25px;
+}
+
+body .container .theme button
+{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.123);
+    padding: 8px;
+    background-color: var(--theme);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: left .1s ease-in-out;
+}
+
+body.light .container .theme button
+{
+    left: 50%;
+}
+
+body .container .theme #toggle-theme i.light
+{
+    display: none;
+}
+
+body .container .theme button i
+{
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.775);
+}
+
+body .container .content
+{
+    width: 100%;
+    padding: 24px 0;
+}
+
+body .container .content ul
+{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+body .container .content ul li
+{
+    display: block;
+    width: 100%;
+}
+
+body .container .content ul li a
+{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 24px;
+    border-radius: 8px;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(4px); 
+    border: 4px solid var(--bg-outline);
+    background-color: var(--buttom-socials);
+    color: var(--font-color);
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: all .2s ease-in-out;
+    font-size: 14px;
+}
+
+body .container .content ul li a:hover
+{
+    background-color: var(--bg-outline);
+    color: var(--bg-outline-hover);
+    letter-spacing: 2.5px;
+}
+
+body .container .socials ul
+{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+body .container .socials ul a
+{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 50%;
+    transform: all .2s linear;
+    overflow: hidden;
+}
+
+body .container .socials ul a i
+{
+    font-size: 20px;
+    color: var(--font-color);
+    max-width: 58px;
+}
+
+body .container .socials ul a:hover
+{
+    background-color: var(--icons-socials);
+
+}
+
+body footer
+{
+    margin-top: 24px;
+}
+body footer p
+{
+    color: var(--persist-color);
+}
+
+.light
+{
+    --background-color: white;
+    --font-color: var(--persist-color);
+    --persist-color: black;
+    --icons-socials: rgba(0, 0, 0, 0.097);
+    --my-image: url("../img/rocketseat-logo-light.png");
+}
